@@ -1,0 +1,129 @@
+h2{
+    color:red
+}
+/*element power < class selector < id selector*/
+
+/*Pseudo Selector*/
+        h2:hover{
+            background-color: grey;
+        }
+
+        /*first-child,last-child*/
+        /*nth-child(2) means it applies for every second child of li*/
+        li:nth-child(2){
+            color: steelblue;
+        }
+        /* for every only child in li */
+        /* li:only-child{
+            color: brown
+        } */
+
+        /* #google-link:link{
+        color: blue;
+        }
+
+
+        #google-link:visited{
+        color: crimson;
+        } */
+
+/*Advanced Selectors*/
+        /*every anchor tag that follows up h2(though they do not share any element)*/
+        h2 +a {
+            color: red;
+        }
+      /*checks for element after another but should be sharing same parent tag*/
+        textarea ~ button{
+            color:salmon;
+        }
+        /*every single li under ul */
+        ul > li {
+            color: blue;
+        }
+        /*Any li that goes up to ul */
+        ul li ol {
+            color: chartreuse;
+        }
+/*Attribute selectors*/
+        h2[class=subtitle]{
+            color:darkblue
+        }
+        /*every image whose src starts with "./",, ($ defines ends with)
+        ,,(* defines if it contains the value anywhere in the attribute)*/
+        img[src^="./"]{
+            border: 10px solid black;
+        }
+        /*only works for values seperated by whitespace*/
+        h2[class ~=article-subtitle]{
+            color: rgb(134, 141, 165);
+        }
+/*Properties*/
+       /*css colour pickor */
+       /* background colours */
+       /*background-size-cover*/
+     body{
+           background-color: rgba(216, 191, 216,0.4);/*4th parametre is opacity*/
+           /* background-image: url('./img.jfif'); */
+           
+           /*Gradients*/
+            /*mixing between colour(radio,linear)*/
+             background:linear-gradient(to bottom right,rgb(255, 192, 203),rgba(255, 192, 203,0.4),rgba(255, 192, 203,0));
+             background-size: cover;
+
+       }
+       
+/*Units*/
+       /*percentage-takes % with respect  to parent element*/
+       /* Pixels-absolute value/pt-little bit bigger than pixels/pc-12pts*/
+       /*em-this is relative to the current one*/
+       /*view port-(is the dimensions of whatever you are viewing)
+        vw-width,vh-view height, vw/vh= relative to view port
+        width:70vw-(70 times of the total view port width)
+
+        when we set height ,it will only set content height, not padding or border or margin
+        
+       */
+
+/*fonts/text*/
+       /*underline,overline,text-transform(capitalize),text-allign(centre,left,right,justify)
+       JUSTIFY-fits in same length */
+
+       /*font size,font-weight,font-styles*/
+       /*fontfamilies-sans-serefs,monospace*/
+/*Layout*/
+    /*content-visible
+     padding-invisible--- internal space
+     border-visible
+     margin-visible ---external space
+     for height use absolute
+     for width use relative*/ 
+     
+    #second-image{
+        height: 400px;
+        width: 80vw;
+        float: right;/*flows overs to right side(everything down comes up)*/
+        /* display: none; */
+        /* display: inline-block(it does not move to new line but creates spacing); */
+    }
+/*Float and display*/
+    /*inline & blocklevel*/
+    /*span-inline
+      block-level-div,p*/
+
+/*Flex-box*/
+    /*flex direction- row(default),column,row-reverse/column-reverse*/
+    /*flex wrap- to wrap till certain lenght and then move to new 
+    line (flex-wrap:wrap) */
+    /*justify-content:flex-start(where the container starts)
+                    flex-end(oppoite)
+                    center 
+                    space-between (equal divisions bet flwx items)
+                    space-aroound(at edges)
+    align-items-center(arranged vertically)*/
+    /*orders:1/2/3 to change the order of the flex items*/
+    /*flex-grow,shrink,basis- these properties allow how to define extra space arround the flex
+    items 
+        flex-basis-defines min width
+        flex-grow--1-every flex item is going to get same extra space
+         flex-shrink(default 1)
+         flex:1*/
